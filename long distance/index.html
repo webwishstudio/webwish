@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Until We're Together Again ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()">♫</button>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="stars"></div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                TWO PLACES · ONE HEART
+            </p>
+
+            <h1>
+                Miles apart,<br>
+                <span>never apart.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Distance may keep us from holding hands,
+                but it can never keep our hearts apart.
+            </p>
+
+
+            <!-- CONNECTION -->
+
+            <div class="connection">
+
+                <div class="place">
+
+                    <div class="city-heart">♥</div>
+
+                    <strong>CHENNAI</strong>
+
+                    <small>My side of the world</small>
+
+                </div>
+
+
+                <div class="route">
+
+                    <span class="plane">✈</span>
+
+                    <div class="route-line"></div>
+
+                    <span class="signal">♥</span>
+
+                </div>
+
+
+                <div class="place">
+
+                    <div class="city-heart">♥</div>
+
+                    <strong>DUBAI</strong>
+
+                    <small>Your side of the world</small>
+
+                </div>
+
+            </div>
+
+
+            <button class="begin-btn" onclick="beginJourney()">
+                Begin Our Journey ↓
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISTANCE -->
+
+    <section class="distance">
+
+        <p class="label">
+            THE DISTANCE
+        </p>
+
+        <h2>
+            Different skies.<br>
+            <span>Same moon.</span>
+        </h2>
+
+        <p class="description">
+            While you're looking at the stars from there,
+            I'm looking at the same sky from here.
+            Maybe that's how we stay connected.
+        </p>
+
+
+        <div class="sky">
+
+            <div class="moon">
+                ☾
+            </div>
+
+            <div class="stars-small">
+                ✦　·　✧　·　✦　·　✧
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLOCKS -->
+
+    <section class="clocks">
+
+        <p class="label">
+            RIGHT NOW
+        </p>
+
+        <h2>
+            Two clocks.<br>
+            <span>One connection.</span>
+        </h2>
+
+
+        <div class="clock-container">
+
+            <div class="clock-card">
+
+                <span>HERE</span>
+
+                <h3 id="timeOne">
+                    00:00:00
+                </h3>
+
+                <p>
+                    Chennai
+                </p>
+
+            </div>
+
+
+            <div class="heart-divider">
+                ♥
+            </div>
+
+
+            <div class="clock-card">
+
+                <span>THERE</span>
+
+                <h3 id="timeTwo">
+                    00:00:00
+                </h3>
+
+                <p>
+                    Dubai
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+
+    <section class="message-section">
+
+        <div class="message-card">
+
+            <div class="message-icon">
+                💌
+            </div>
+
+            <p class="label">
+                SOMETHING I WANT YOU TO KNOW
+            </p>
+
+            <h2 id="typingText"></h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+
+    <section class="memories">
+
+        <p class="label">
+            EVEN FROM FAR AWAY
+        </p>
+
+        <h2>
+            We still make<br>
+            <span>beautiful memories.</span>
+        </h2>
+
+
+        <div class="memory-grid">
+
+            <div class="memory-card">
+
+                <img src="images/photo1.jpg">
+
+                <div>
+                    <span>Our favourite moment</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-card">
+
+                <img src="images/photo2.jpg">
+
+                <div>
+                    <span>That smile</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-card">
+
+                <img src="images/photo3.jpg">
+
+                <div>
+                    <span>Always worth remembering</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIRTUAL HUG -->
+
+    <section class="hug">
+
+        <div class="hug-circle">
+
+            <div class="hug-left">
+                🫂
+            </div>
+
+            <div class="hug-heart">
+                ♥
+            </div>
+
+            <div class="hug-right">
+                🫂
+            </div>
+
+        </div>
+
+        <p class="label">
+            UNTIL I CAN HUG YOU FOR REAL
+        </p>
+
+        <h2>
+            Sending you<br>
+            a <span>virtual hug.</span>
+        </h2>
+
+        <button onclick="sendHug()">
+            Send a Hug ❤️
+        </button>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown">
+
+        <p class="label">
+            UNTIL WE MEET AGAIN
+        </p>
+
+        <h2>
+            The next hello<br>
+            is getting closer.
+        </h2>
+
+
+        <div class="timer">
+
+            <div>
+                <strong id="days">00</strong>
+                <small>Days</small>
+            </div>
+
+            <div>
+                <strong id="hours">00</strong>
+                <small>Hours</small>
+            </div>
+
+            <div>
+                <strong id="minutes">00</strong>
+                <small>Minutes</small>
+            </div>
+
+            <div>
+                <strong id="seconds">00</strong>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LETTER -->
+
+    <section class="letter">
+
+        <div class="letter-box">
+
+            <p class="label">
+                A LETTER FROM MY HEART
+            </p>
+
+            <h2>
+                Until distance becomes<br>
+                just a memory...
+            </h2>
+
+            <p>
+                I know some days are harder than others.
+                I know there are moments when all I want
+                is to be beside you.
+            </p>
+
+            <p>
+                But every call, every message, every
+                “I miss you” reminds me that what we have
+                is worth every mile between us.
+            </p>
+
+            <p>
+                One day, there won't be a screen between us.
+                There won't be airports, time zones or
+                goodbyes.
+            </p>
+
+            <h3>
+                Until then, I'll keep choosing you.
+            </h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="final-plane">
+            ✈
+        </div>
+
+        <p class="label">
+            ONE DAY
+        </p>
+
+        <h2>
+            No more miles.<br>
+            No more goodbyes.
+        </h2>
+
+        <p>
+            Just you.<br>
+            Just me.<br>
+            Finally together.
+        </p>
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+        <div class="forever">
+            Until we're together again ❤️
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with ❤️ across the miles
+        <span>WebWish</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
