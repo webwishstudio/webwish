@@ -1,28 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #09050a;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+
 /* =========================
-   HEART → PROPOSAL
+   COMMON
 ========================= */
 
-function startProposal() {
+section {
+    padding: 120px 8%;
+}
 
-    var heart = document.getElementById("heroHeart");
+.label {
+    color: #e9a1b3;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
 
-    heart.classList.remove("burst");
-
-    void heart.offsetWidth;
-
-    heart.classList.add("burst");
+h2 {
+    font-weight: normal;
+}
 
 
-    setTimeout(function() {
+/* =========================
+   HERO
+========================= */
 
-        var story = document.querySelector(".story");
+.hero {
+    min-height: 100vh;
 
-        story.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    }, 850);
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #55182d 0%,
+            #230b16 40%,
+            #09050a 75%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #d99aaa;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1;
+    font-weight: normal;
+}
+
+.hero h1 span {
+    color: #ed819a;
+    font-style: italic;
+}
+
+.hero-heart {
+    display: inline-block;
+
+    font-size: 125px;
+
+    margin-top: 55px;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(0 0 15px #ff496f)
+        drop-shadow(0 0 35px #ff496f);
+
+    animation: heartbeat 1.3s infinite;
+}
+
+.down-arrow {
+    margin-top: 30px;
+
+    font-size: 40px;
+
+    color: #ff8da5;
+
+    cursor: pointer;
+
+    animation: arrowDown 1.3s infinite;
+}
+
+.scroll-text {
+    margin-top: 10px;
+
+    color: #9f858d;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* HEART BURST */
+
+.hero-heart.burst {
+    animation: heartBurst .9s forwards !important;
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes arrowDown {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes heartBurst {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    35% {
+        transform: scale(1.6);
+    }
+
+    70% {
+        transform: scale(3);
+        opacity: .7;
+    }
+
+    100% {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.story-image,
+.story-content {
+    flex: 1;
+}
+
+.image-frame {
+    padding: 10px;
+
+    border: 1px solid #653143;
+
+    transform: rotate(-3deg);
+
+    background: #160911;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.story-content h2 {
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.story-content h2 span {
+    color: #e889a0;
+    font-style: italic;
+}
+
+.story-content p {
+    color: #bca9af;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+    text-align: center;
+
+    background: #120810;
+}
+
+.memories h2 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1.1;
+}
+
+.memory-grid {
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.memory {
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.memory img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .8s;
+}
+
+.memory:hover img {
+    transform: scale(1.1);
+}
+
+.memory span {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    font-size: 16px;
+
+    text-shadow:
+        0 2px 10px black;
+}
+
+
+/* =========================
+   TYPING
+========================= */
+
+.typing-section {
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.typing-heart {
+    font-size: 55px;
+
+    color: #ff6484;
+
+    margin-bottom: 30px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.typing-section h2 {
+    max-width: 900px;
+
+    min-height: 100px;
+
+    font-size: clamp(32px, 5vw, 60px);
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   RING
+========================= */
+
+.ring-section {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #4d1429,
+            #09050a 70%
+        );
+}
+
+.ring-glow {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 30px #ff5277,
+        0 0 80px rgba(255, 82, 119, .4);
+
+    animation: ringPulse 2s infinite;
+}
+
+.ring {
+    font-size: 65px;
+}
+
+.ring-section h2 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1.1;
+}
+
+.ring-section h2 span {
+    color: #ed8299;
+
+    font-style: italic;
+}
+
+.ring-text {
+    margin-top: 30px;
+
+    color: #c1adb3;
+
+    line-height: 1.9;
+}
+
+@keyframes ringPulse {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* =========================
+   PROPOSAL
+========================= */
+
+.proposal {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #0d060b;
+}
+
+.proposal-card {
+    max-width: 700px;
+
+    padding: 70px 40px;
+
+    border: 1px solid #542437;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #28101b,
+            #13070d
+        );
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5);
+}
+
+.proposal-heart {
+    font-size: 70px;
+
+    animation: heartbeat 1.4s infinite;
+
+    margin-bottom: 30px;
+}
+
+.proposal-card h2 {
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: .95;
+
+    margin-bottom: 30px;
+}
+
+.proposal-card p:not(.label) {
+    color: #c3afb5;
+
+    line-height: 1.9;
+}
+
+.buttons {
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.yes-btn {
+    background: #ed6f8d;
+
+    border: none;
+
+    color: white;
+
+    box-shadow:
+        0 0 25px rgba(237,111,141,.5);
+}
+
+.yes-btn:hover {
+    transform: scale(1.08);
+}
+
+.no-btn {
+    background: transparent;
+
+    border: 1px solid #69404e;
+
+    color: #bba5ac;
+
+    position: relative;
+}
+
+
+/* =========================
+   YES
+========================= */
+
+.yes-section {
+    display: none;
+
+    min-height: 100vh;
+
+    text-align: center;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle,
+            #65172f,
+            #0b0509 75%
+        );
+}
+
+.yes-section.show {
+    display: flex;
+}
+
+.celebration-heart {
+    font-size: 100px;
+
+    animation:
+        heartbeat 1s infinite,
+        celebration 2s infinite;
+}
+
+.yes-section h2 {
+    font-size: clamp(40px, 7vw, 75px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.yes-section p:not(.label) {
+    color: #cbb6bd;
+
+    line-height: 1.9;
+}
+
+.forever-text {
+    margin-top: 40px;
+
+    color: #f18da4;
+
+    font-size: 22px;
+
+    font-style: italic;
+}
+
+@keyframes celebration {
+
+    0%,100% {
+        filter: drop-shadow(0 0 10px #ff5078);
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 30px #ff5078)
+            drop-shadow(0 0 60px #ff5078);
+    }
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.final-heart {
+    font-size: 70px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.final h2 {
+    font-size: clamp(45px, 7vw, 75px);
+
+    margin: 30px 0;
+}
+
+.final > p {
+    color: #bca8ae;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+.signature {
+    margin-top: 50px;
+
+    color: #927d84;
+
+    line-height: 1.8;
+}
+
+.signature span {
+    color: #ec849c;
+
+    font-size: 20px;
 }
 
 
@@ -30,262 +649,96 @@ function startProposal() {
    MUSIC
 ========================= */
 
-function toggleMusic() {
+.music-btn {
+    position: fixed;
 
-    var music = document.getElementById("music");
+    top: 25px;
+    right: 25px;
 
-    var button = document.querySelector(".music-btn");
+    z-index: 100;
 
+    width: 45px;
+    height: 45px;
 
-    if (music.paused) {
+    border-radius: 50%;
 
-        music.play();
+    border: 1px solid #824052;
 
-        button.innerHTML = "🔊";
+    background: #24101a;
 
-    } else {
+    color: white;
 
-        music.pause();
+    cursor: pointer;
 
-        button.innerHTML = "♫";
-
-    }
+    font-size: 18px;
 }
 
 
 /* =========================
-   TYPING EFFECT
+   FOOTER
 ========================= */
 
-var text =
-    "I don't know when it happened... but somewhere along the way, my heart started choosing you.";
+footer {
+    text-align: center;
 
-var index = 0;
+    padding: 35px;
 
+    color: #806d74;
 
-function typeMessage() {
+    background: #060306;
+}
 
-    if (index < text.length) {
+footer span {
+    display: block;
 
-        document.getElementById("typingText").innerHTML +=
-            text.charAt(index);
+    margin-top: 10px;
 
-        index++;
+    color: #e8889f;
 
-        setTimeout(typeMessage, 55);
-    }
+    letter-spacing: 4px;
 }
 
 
-var typingSection =
-    document.querySelector(".typing-section");
+/* =========================
+   MOBILE
+========================= */
 
+@media (max-width: 768px) {
 
-var typingStarted = false;
-
-
-window.addEventListener("scroll", function() {
-
-    var position =
-        typingSection.getBoundingClientRect().top;
-
-    if (
-        position < window.innerHeight - 100 &&
-        !typingStarted
-    ) {
-
-        typingStarted = true;
-
-        typeMessage();
+    section {
+        padding: 90px 25px;
     }
 
-});
+    .story {
+        flex-direction: column;
 
-
-/* =========================
-   NO BUTTON
-========================= */
-
-var noButton =
-    document.getElementById("noBtn");
-
-
-noButton.addEventListener("mouseover", function() {
-
-    var x =
-        Math.random() * 180 - 90;
-
-    var y =
-        Math.random() * 100 - 50;
-
-    noButton.style.transform =
-        "translate(" + x + "px," + y + "px)";
-
-});
-
-
-/* =========================
-   YES
-========================= */
-
-function sayYes() {
-
-    var yesSection =
-        document.getElementById("yesSection");
-
-
-    yesSection.classList.add("show");
-
-
-    yesSection.scrollIntoView({
-        behavior: "smooth"
-    });
-
-
-    createConfetti();
-}
-
-
-/* =========================
-   CONFETTI
-========================= */
-
-function createConfetti() {
-
-    for (var i = 0; i < 80; i++) {
-
-        var heart =
-            document.createElement("div");
-
-        heart.innerHTML = "♥";
-
-        heart.style.position = "fixed";
-
-        heart.style.left =
-            Math.random() * 100 + "%";
-
-        heart.style.top = "-20px";
-
-        heart.style.fontSize =
-            Math.random() * 20 + 10 + "px";
-
-        heart.style.color =
-            "hsl(" +
-            Math.random() * 360 +
-            ", 80%, 70%)";
-
-        heart.style.zIndex = "9999";
-
-        heart.style.pointerEvents = "none";
-
-
-        document.body.appendChild(heart);
-
-
-        var duration =
-            Math.random() * 3 + 2;
-
-
-        heart.animate(
-            [
-                {
-                    transform:
-                        "translateY(0) rotate(0deg)",
-                    opacity: 1
-                },
-
-                {
-                    transform:
-                        "translateY(110vh) rotate(720deg)",
-                    opacity: 0
-                }
-            ],
-            {
-                duration:
-                    duration * 1000,
-
-                easing:
-                    "cubic-bezier(.2,.8,.3,1)"
-            }
-        );
-
-
-        setTimeout(function() {
-
-            heart.remove();
-
-        }, duration * 1000);
-
+        gap: 50px;
     }
-}
 
+    .image-frame img {
+        height: 420px;
+    }
 
-/* =========================
-   FLOATING HEARTS
-========================= */
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
 
-function createFloatingHeart() {
+    .memory {
+        height: 400px;
+    }
 
-    var heart =
-        document.createElement("div");
+    .proposal-card {
+        padding: 60px 25px;
+    }
 
-    heart.innerHTML = "♥";
+    .buttons {
+        flex-direction: column;
 
-    heart.style.position = "fixed";
-
-    heart.style.bottom = "-30px";
-
-    heart.style.left =
-        Math.random() * 100 + "%";
-
-    heart.style.fontSize =
-        Math.random() * 15 + 10 + "px";
-
-    heart.style.color = "#ff6685";
-
-    heart.style.opacity = ".4";
-
-    heart.style.pointerEvents = "none";
-
-    heart.style.zIndex = "1";
-
-
-    document.body.appendChild(heart);
-
-
-    heart.animate(
-        [
-            {
-                transform: "translateY(0)",
-                opacity: 0
-            },
-
-            {
-                transform:
-                    "translateY(-110vh)",
-                opacity: .5
-            },
-
-            {
-                transform:
-                    "translateY(-120vh)",
-                opacity: 0
-            }
-        ],
-        {
-            duration:
-                Math.random() * 5000 + 5000
-        }
-    );
-
-
-    setTimeout(function() {
-
-        heart.remove();
-
-    }, 10000);
+        align-items: center;
+    }
 
 }
+        
 
 
-setInterval(createFloatingHeart, 800);
+
