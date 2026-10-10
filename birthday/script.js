@@ -421,7 +421,7 @@ document.addEventListener(
 function giftYes() {
 
     document.getElementById("giftAnswer").innerHTML =
-        "🎁✨ Surprise! 💖<br><br>திரும்பி பாருங்க! 😍🎉";
+        "🎁✨ Surprise! 💖<br><br>i am your gift!😜😚😍🎉";
 
 }
 
