@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Question For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts"></div>
+
+    <!-- Sparkles -->
+    <div class="sparkles"></div>
+
+
+    <!-- MUSIC -->
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()">♫</button>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                A LITTLE SOMETHING FROM MY HEART
+            </p>
+
+            <h1>
+                There is something<br>
+                <span>I want to ask you...</span>
+            </h1>
+
+            <div class="hero-heart" id="heroHeart">
+                ❤️
+            </div>
+
+            <div class="down-arrow" onclick="startProposal()">
+                ↓
+            </div>
+
+            <p class="scroll-text">
+                Tap the heart
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="story">
+
+        <div class="story-image">
+
+            <div class="image-frame">
+
+                <img src="images/photo1.jpg" alt="Our Memory">
+
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <p class="label">
+                BEFORE I ASK...
+            </p>
+
+            <h2>
+                Somehow,<br>
+                you became my <span>favorite person.</span>
+            </h2>
+
+            <p>
+                Somewhere between our conversations,
+                laughter and those little moments,
+                you became someone incredibly special to me.
+            </p>
+
+            <p>
+                And now there is something I've been
+                wanting to say for a while.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+
+    <section class="memories">
+
+        <p class="label">
+            LITTLE MOMENTS
+        </p>
+
+        <h2>
+            Moments I never<br>
+            want to forget.
+        </h2>
+
+
+        <div class="memory-grid">
+
+            <div class="memory">
+                <img src="images/photo1.jpg">
+                <span>That first smile.</span>
+            </div>
+
+            <div class="memory">
+                <img src="images/photo2.jpg">
+                <span>That unforgettable day.</span>
+            </div>
+
+            <div class="memory">
+                <img src="images/photo3.jpg">
+                <span>Every moment with you.</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TYPING MESSAGE -->
+
+    <section class="typing-section">
+
+        <div class="typing-heart">
+            ♥
+        </div>
+
+        <p class="label">
+            WHAT MY HEART WANTS TO SAY
+        </p>
+
+        <h2 id="typingText"></h2>
+
+    </section>
+
+
+    <!-- GLOWING RING -->
+
+    <section class="ring-section">
+
+        <div class="ring-glow">
+
+            <div class="ring">
+                💍
+            </div>
+
+        </div>
+
+        <p class="label">
+            ONE QUESTION
+        </p>
+
+        <h2>
+            Will you be<br>
+            my <span>forever?</span>
+        </h2>
+
+        <p class="ring-text">
+            I don't promise a perfect life.<br>
+            I promise to make every moment count.
+        </p>
+
+    </section>
+
+
+    <!-- PROPOSAL -->
+
+    <section class="proposal" id="proposal">
+
+        <div class="proposal-card">
+
+            <div class="proposal-heart">
+                ❤️
+            </div>
+
+            <p class="label">
+                SO HERE IT IS...
+            </p>
+
+            <h2>
+                Will you<br>
+                be mine?
+            </h2>
+
+            <p>
+                Not just for today.<br>
+                Not just for tomorrow.<br>
+                But for all the beautiful days ahead.
+            </p>
+
+
+            <div class="buttons">
+
+                <button class="yes-btn" onclick="sayYes()">
+                    YES ❤️
+                </button>
+
+                <button class="no-btn" id="noBtn">
+                    NO
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- YES MESSAGE -->
+
+    <section class="yes-section" id="yesSection">
+
+        <div class="celebration-heart">
+            ❤️
+        </div>
+
+        <p class="label">
+            YOU JUST MADE MY WORLD
+        </p>
+
+        <h2>
+            I knew my heart<br>
+            chose the right person.
+        </h2>
+
+        <p>
+            This is just the beginning<br>
+            of our beautiful story.
+        </p>
+
+        <div class="forever-text">
+            You & Me · Always ❤️
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <h2>
+            And suddenly...
+        </h2>
+
+        <p>
+            Forever doesn't sound<br>
+            long enough anymore.
+        </p>
+
+        <div class="signature">
+            With all my heart,<br>
+            <span>Your Person ❤️</span>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        Made with ❤️ for someone special
+
+        <span>
+            WebWish
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
