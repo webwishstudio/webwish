@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Miracle | Baby Ceremony</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()">
+        ♫
+    </button>
+
+
+    <!-- OPENING -->
+
+    <section class="opening">
+
+        <div class="cloud cloud-one">
+            ☁
+        </div>
+
+        <div class="cloud cloud-two">
+            ☁
+        </div>
+
+        <div class="moon">
+            ☾
+        </div>
+
+        <div class="opening-content">
+
+            <p class="eyebrow">
+                A LITTLE MIRACLE HAS ARRIVED
+            </p>
+
+            <div class="teddy">
+                🧸
+            </div>
+
+            <h1>
+                Hello,<br>
+                <span>Little One.</span>
+            </h1>
+
+            <p>
+                A tiny little person has made
+                our world infinitely more beautiful.
+            </p>
+
+            <button
+                class="begin-btn"
+                onclick="beginCeremony()">
+
+                Discover The Celebration
+                ↓
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                WITH LOVE & BLESSINGS
+            </p>
+
+            <div class="baby-icon">
+                👶
+            </div>
+
+            <h2>
+                Welcome
+                <span>Our Little Star</span>
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="hero-text">
+                Today we celebrate a beautiful
+                new chapter in our family's story.
+            </p>
+
+            <p class="date">
+                15 · NOVEMBER · 2026
+            </p>
+
+        </div>
+
+        <div class="scroll">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- BABY NAME -->
+
+    <section class="name-section">
+
+        <p class="eyebrow">
+            A NAME FULL OF LOVE
+        </p>
+
+        <h2>
+            Our little one is called
+        </h2>
+
+        <div
+            class="name-card"
+            onclick="revealName()">
+
+            <div id="nameCover">
+
+                <span>
+                    ✦
+                </span>
+
+                <h3>
+                    Tap to reveal
+                </h3>
+
+                <small>
+                    A special name awaits...
+                </small>
+
+            </div>
+
+
+            <div
+                id="babyName"
+                class="baby-name">
+
+                <p>
+                    OUR LITTLE STAR
+                </p>
+
+                <h3>
+                    AARAV
+                </h3>
+
+                <span>
+                    A name chosen with
+                    endless love.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+
+    <section class="message">
+
+        <div class="message-box">
+
+            <div class="quote">
+                “
+            </div>
+
+            <p class="eyebrow">
+                A MESSAGE FROM THE FAMILY
+            </p>
+
+            <h2 id="typingText"></h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- CEREMONY -->
+
+    <section class="ceremony">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                THE CELEBRATION
+            </p>
+
+            <h2>
+                A day filled with<br>
+                <span>love & blessings.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="ceremony-grid">
+
+            <div class="ceremony-card">
+
+                <div class="ceremony-icon">
+                    🌸
+                </div>
+
+                <span>
+                    10:00 AM
+                </span>
+
+                <h3>
+                    Welcome
+                </h3>
+
+                <p>
+                    Welcome our family
+                    and loved ones.
+                </p>
+
+            </div>
+
+
+            <div class="ceremony-card featured">
+
+                <div class="ceremony-icon">
+                    🪷
+                </div>
+
+                <span>
+                    11:00 AM
+                </span>
+
+                <h3>
+                    Naming Ceremony
+                </h3>
+
+                <p>
+                    The beautiful moment
+                    we reveal our baby's name.
+                </p>
+
+            </div>
+
+
+            <div class="ceremony-card">
+
+                <div class="ceremony-icon">
+                    🎂
+                </div>
+
+                <span>
+                    12:30 PM
+                </span>
+
+                <h3>
+                    Celebration
+                </h3>
+
+                <p>
+                    Food, laughter and
+                    beautiful memories.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown">
+
+        <p class="eyebrow">
+            COUNTING DOWN
+        </p>
+
+        <h2>
+            Until we celebrate
+            <span>together.</span>
+        </h2>
+
+
+        <div class="timer">
+
+            <div>
+                <strong id="days">
+                    00
+                </strong>
+
+                <small>
+                    DAYS
+                </small>
+            </div>
+
+
+            <div>
+                <strong id="hours">
+                    00
+                </strong>
+
+                <small>
+                    HOURS
+                </small>
+            </div>
+
+
+            <div>
+                <strong id="minutes">
+                    00
+                </strong>
+
+                <small>
+                    MINUTES
+                </small>
+            </div>
+
+
+            <div>
+                <strong id="seconds">
+                    00
+                </strong>
+
+                <small>
+                    SECONDS
+                </small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                LITTLE MEMORIES
+            </p>
+
+            <h2>
+                Moments we want<br>
+                <span>to remember forever.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="photo big">
+                <img src="images/baby.jpg">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo1.jpg">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo2.jpg">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo3.jpg">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INVITATION -->
+
+    <section class="invitation">
+
+        <div
+            class="invitation-card"
+            onclick="openInvitation()">
+
+            <div class="ribbon">
+                🎀
+            </div>
+
+            <p>
+                YOU ARE<br>
+                WARMLY INVITED
+            </p>
+
+            <h3>
+                A Little Celebration
+            </h3>
+
+            <span>
+                Tap to open
+            </span>
+
+        </div>
+
+
+        <div
+            class="invite-message"
+            id="inviteMessage">
+
+            <p class="eyebrow">
+                WITH LOVE
+            </p>
+
+            <h2>
+                Come celebrate<br>
+                this beautiful moment with us.
+            </h2>
+
+            <p>
+                Your presence and blessings
+                would make this special day
+                even more meaningful.
+            </p>
+
+            <button onclick="showVenue()">
+                View Ceremony Details
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- VENUE -->
+
+    <section
+        class="venue"
+        id="venue">
+
+        <p class="eyebrow">
+            JOIN OUR CELEBRATION
+        </p>
+
+        <h2>
+            Come make memories<br>
+            <span>with our little one.</span>
+        </h2>
+
+
+        <div class="venue-card">
+
+            <div class="venue-icon">
+                📍
+            </div>
+
+            <h3>
+                Grand Celebration Hall
+            </h3>
+
+            <p>
+                123 Garden Road,<br>
+                Chennai, Tamil Nadu
+            </p>
+
+            <div class="venue-line"></div>
+
+            <p>
+                15 November 2026<br>
+                10:00 AM onwards
+            </p>
+
+            <button>
+                View Location
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="stars">
+            ✦　✧　✦
+        </div>
+
+        <div class="final-baby">
+            🧸
+        </div>
+
+        <p class="eyebrow">
+            OUR GREATEST LITTLE BLESSING
+        </p>
+
+        <h2>
+            Tiny hands.<br>
+            <span>Endless love.</span>
+        </h2>
+
+        <p>
+            A little miracle has entered
+            our lives and filled our hearts
+            with a love we never knew existed.
+        </p>
+
+        <div class="heart">
+            ♡
+        </div>
+
+        <div class="forever">
+            With love, always.
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Made with love for
+        </p>
+
+        <strong>
+            Our Little Star
+        </strong>
+
+        <span>
+            WebWish
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
