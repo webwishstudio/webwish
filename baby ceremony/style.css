@@ -1,0 +1,1026 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f5ed;
+    color: #37483e;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 120px 8%;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #8b9d88;
+    margin-bottom: 25px;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================= OPENING ================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf5,
+            #dfe8dc
+        );
+}
+
+.opening-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 700px;
+}
+
+.teddy {
+    font-size: 75px;
+
+    animation: teddyFloat 3s infinite;
+}
+
+@keyframes teddyFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.opening h1 {
+    font-size: clamp(60px, 10vw, 110px);
+
+    font-weight: normal;
+
+    line-height: .9;
+
+    margin: 25px 0;
+}
+
+.opening h1 span {
+    color: #839b7f;
+    font-style: italic;
+}
+
+.opening-content > p:not(.eyebrow) {
+    color: #718076;
+
+    line-height: 1.8;
+}
+
+.begin-btn {
+    margin-top: 40px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+
+    border: 1px solid #829b83;
+
+    color: #506953;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.begin-btn:hover {
+    background: #607963;
+
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+.cloud {
+    position: absolute;
+
+    color: white;
+
+    font-size: 100px;
+
+    opacity: .6;
+}
+
+.cloud-one {
+    top: 12%;
+    left: 5%;
+
+    animation: cloudMove 8s infinite;
+}
+
+.cloud-two {
+    bottom: 15%;
+    right: 5%;
+
+    animation: cloudMove 10s infinite reverse;
+}
+
+@keyframes cloudMove {
+
+    0%,100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(35px);
+    }
+}
+
+.moon {
+    position: absolute;
+
+    top: 10%;
+    right: 15%;
+
+    font-size: 70px;
+
+    color: #d4b978;
+
+    animation: moonFloat 4s infinite;
+}
+
+@keyframes moonFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(52,67,55,.35),
+            rgba(38,52,42,.65)
+        ),
+        url("images/baby.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .eyebrow {
+    color: #d9c994;
+}
+
+.baby-icon {
+    font-size: 70px;
+
+    animation: babyFloat 3s infinite;
+}
+
+@keyframes babyFloat {
+
+    0%,100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+.hero h2 {
+    font-size: clamp(55px, 9vw, 100px);
+
+    font-weight: normal;
+
+    line-height: .9;
+
+    margin: 25px;
+}
+
+.hero h2 span {
+    display: block;
+
+    color: #e1cf91;
+
+    font-style: italic;
+
+    font-size: .55em;
+
+    margin-top: 15px;
+}
+
+.gold-line {
+    width: 90px;
+    height: 1px;
+
+    background: #d9c17d;
+
+    margin: 30px auto;
+}
+
+.hero-text {
+    line-height: 1.8;
+
+    color: #e7e7dd;
+}
+
+.date {
+    margin-top: 30px;
+
+    letter-spacing: 5px;
+
+    color: #e0ca8b;
+}
+
+.scroll {
+    position: absolute;
+
+    bottom: 30px;
+
+    font-size: 30px;
+
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+
+/* ================= NAME ================= */
+
+.name-section {
+    text-align: center;
+
+    background: #fffdf7;
+}
+
+.name-section h2 {
+    font-size: 45px;
+
+    font-weight: normal;
+}
+
+.name-card {
+    width: 360px;
+    max-width: 90%;
+
+    height: 250px;
+
+    margin: 60px auto 0;
+
+    position: relative;
+
+    cursor: pointer;
+
+    background: #edf2e9;
+
+    border: 1px solid #bdcbb8;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s;
+}
+
+.name-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(70,90,70,.15);
+}
+
+#nameCover {
+    text-align: center;
+}
+
+#nameCover span {
+    font-size: 30px;
+
+    color: #c2a55c;
+}
+
+#nameCover h3 {
+    margin: 15px;
+
+    font-size: 24px;
+
+    font-weight: normal;
+}
+
+#nameCover small {
+    color: #829084;
+}
+
+.baby-name {
+    display: none;
+}
+
+.baby-name.show {
+    display: block;
+
+    animation: reveal .8s ease;
+}
+
+.baby-name p {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #9c8b5d;
+}
+
+.baby-name h3 {
+    font-size: 65px;
+
+    font-weight: normal;
+
+    color: #71876d;
+
+    margin: 15px;
+}
+
+.baby-name span {
+    color: #758278;
+}
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ================= MESSAGE ================= */
+
+.message {
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #e6ede1;
+}
+
+.message-box {
+    max-width: 850px;
+}
+
+.quote {
+    font-size: 100px;
+
+    color: #b49c5f;
+
+    height: 80px;
+}
+
+#typingText {
+    min-height: 150px;
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    font-weight: normal;
+
+    line-height: 1.3;
+}
+
+
+/* ================= CEREMONY ================= */
+
+.ceremony {
+    background: #fffaf2;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 7vw, 75px);
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.section-heading h2 span {
+    color: #71886d;
+
+    font-style: italic;
+}
+
+.ceremony-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.ceremony-card {
+    text-align: center;
+
+    padding: 50px 25px;
+
+    border: 1px solid #d2dccd;
+
+    background: #f8faf4;
+
+    transition: .5s;
+}
+
+.ceremony-card:hover {
+    transform: translateY(-10px);
+}
+
+.ceremony-card.featured {
+    background: #71866d;
+
+    color: white;
+
+    transform: translateY(-20px);
+}
+
+.ceremony-card.featured:hover {
+    transform: translateY(-30px);
+}
+
+.ceremony-icon {
+    font-size: 40px;
+
+    margin-bottom: 25px;
+}
+
+.ceremony-card span {
+    color: #a28b57;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+}
+
+.ceremony-card h3 {
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin: 20px 0;
+}
+
+.ceremony-card p {
+    line-height: 1.7;
+
+    color: #758078;
+}
+
+.featured p,
+.featured span {
+    color: #e5eadf;
+}
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #e6eee0,
+            #cbd9c5
+        );
+}
+
+.countdown h2 {
+    font-size: clamp(45px, 7vw, 75px);
+
+    font-weight: normal;
+}
+
+.countdown h2 span {
+    color: #657e61;
+
+    font-style: italic;
+}
+
+.timer {
+    max-width: 800px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 15px;
+}
+
+.timer div {
+    padding: 30px 10px;
+
+    border-top: 1px solid #879b7e;
+
+    border-bottom: 1px solid #879b7e;
+}
+
+.timer strong {
+    display: block;
+
+    font-size: 45px;
+
+    font-weight: normal;
+
+    color: #5f765c;
+}
+
+.timer small {
+    letter-spacing: 3px;
+
+    color: #728070;
+
+    font-size: 9px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    background: #fffdf7;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    grid-auto-rows: 300px;
+
+    gap: 15px;
+}
+
+.photo {
+    overflow: hidden;
+}
+
+.photo.big {
+    grid-row: span 2;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .8s;
+}
+
+.photo:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= INVITATION ================= */
+
+.invitation {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #dce6d8;
+}
+
+.invitation-card {
+    width: 350px;
+    max-width: 90%;
+
+    padding: 70px 30px;
+
+    background: #fffdf7;
+
+    border: 1px solid #aabb9f;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 20px 50px rgba(50,70,50,.15);
+
+    transition: .5s;
+}
+
+.invitation-card:hover {
+    transform: translateY(-10px);
+}
+
+.ribbon {
+    font-size: 45px;
+}
+
+.invitation-card p {
+    color: #8b9a83;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    line-height: 2;
+
+    margin-top: 20px;
+}
+
+.invitation-card h3 {
+    font-size: 35px;
+
+    font-weight: normal;
+
+    margin: 20px 0;
+}
+
+.invitation-card span {
+    color: #7e8a7c;
+
+    font-size: 11px;
+}
+
+.invite-message {
+    display: none;
+
+    max-width: 700px;
+
+    margin-top: 60px;
+}
+
+.invite-message.show {
+    display: block;
+
+    animation: reveal .8s ease;
+}
+
+.invite-message h2 {
+    font-size: 50px;
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.invite-message > p:not(.eyebrow) {
+    color: #6e7b70;
+
+    line-height: 1.8;
+}
+
+.invite-message button,
+.venue-card button {
+    margin-top: 30px;
+
+    padding: 14px 25px;
+
+    border: 0;
+
+    background: #667e62;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================= VENUE ================= */
+
+.venue {
+    text-align: center;
+
+    background: #f8f5eb;
+}
+
+.venue h2 {
+    font-size: clamp(45px, 7vw, 75px);
+
+    font-weight: normal;
+}
+
+.venue h2 span {
+    color: #72886d;
+
+    font-style: italic;
+}
+
+.venue-card {
+    max-width: 500px;
+
+    margin: 50px auto 0;
+
+    padding: 50px 30px;
+
+    background: #fffdf7;
+
+    border: 1px solid #c5d0bf;
+}
+
+.venue-icon {
+    font-size: 40px;
+}
+
+.venue-card h3 {
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin: 20px 0;
+}
+
+.venue-card p {
+    color: #718076;
+
+    line-height: 1.8;
+
+    margin: 15px;
+}
+
+.venue-line {
+    width: 60px;
+    height: 1px;
+
+    background: #b7a265;
+
+    margin: 25px auto;
+}
+
+
+/* ================= FINAL ================= */
+
+.final {
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #657b61,
+            #344437
+        );
+
+    color: white;
+}
+
+.stars {
+    color: #e1cc8e;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.final-baby {
+    font-size: 65px;
+
+    animation: teddyFloat 3s infinite;
+}
+
+.final .eyebrow {
+    color: #d9c98f;
+}
+
+.final h2 {
+    font-size: clamp(55px, 9vw, 95px);
+
+    font-weight: normal;
+
+    line-height: .95;
+}
+
+.final h2 span {
+    color: #dfca8f;
+
+    font-style: italic;
+}
+
+.final > p:not(.eyebrow) {
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    line-height: 1.8;
+
+    color: #e1e7dc;
+}
+
+.heart {
+    margin-top: 35px;
+
+    font-size: 45px;
+
+    color: #e3cc8d;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.forever {
+    margin-top: 20px;
+
+    color: #ddcb91;
+
+    font-style: italic;
+
+    font-size: 20px;
+}
+
+
+/* ================= MUSIC ================= */
+
+.music-btn {
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 1000;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #a4ad88;
+
+    background: #52654f;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px;
+
+    text-align: center;
+
+    background: #263328;
+
+    color: #aeb9aa;
+}
+
+footer strong {
+    display: block;
+
+    color: #d6c58d;
+
+    margin: 10px;
+}
+
+footer span {
+    color: #8f9d8a;
+
+    letter-spacing: 4px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 90px 25px;
+    }
+
+    .ceremony-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ceremony-card.featured {
+        transform: none;
+    }
+
+    .timer {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 300px;
+    }
+
+    .photo.big {
+        grid-row: span 1;
+    }
+
+    .invitation-card {
+        width: 290px;
+    }
+
+    .invite-message h2 {
+        font-size: 40px;
+    }
+
+}
